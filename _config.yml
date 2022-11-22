@@ -1,9 +1,9 @@
-title: Geoffrey Lee Blog
-description: 我自己的博客
+title: Geoffrey Lee Blog Theme
+description: Cayman Blog.
 show_downloads: true
 
 baseurl: "/cayman-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "https://blog.081700.xyz" # change this to the base hostname & protocol for your site
+url: "https://lorepirri.github.io" # change this to the base hostname & protocol for your site
 
 
 google_analytics:
