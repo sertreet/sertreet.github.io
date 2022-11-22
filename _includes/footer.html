@@ -1,35 +1,36 @@
-{%- if site.texture.analytics_id -%}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.texture.analytics_id }}"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() { dataLayer.push(arguments); }
-	gtag('js', new Date());
+<!-- The Footer -->
 
-	gtag('config', '{{ site.texture.analytics_id }}');
-</script>
-{%- endif -%}
+<footer>
+  <div class="container pl-lg-4 pr-lg-4">
+    <div class="d-flex justify-content-between align-items-center text-muted ml-md-3 mr-md-3">
+      <div class="footer-left">
+        <p class="mb-0">
+          © {{ 'now' | date: "%Y" }}
+          <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+          {% if site.data.locales[site.lang].copyright.brief %}
+          <span data-toggle="tooltip" data-placement="top"
+            title="{{ site.data.locales[site.lang].copyright.verbose }}">{{ site.data.locales[site.lang].copyright.brief }}</span>
+          {% endif %}
+        </p>
+      </div>
 
-{%- if site.texture.showPicker -%}
-<div id="texture-picker">
-	<div style="display:flex;justify-content: space-between">
-		<p>Select Texture</p>
-		<p><a id="hidePicker" href="#">Hide</a></p>
-	</div>
-	<div class="texture-colors">
-		<div id="black"></div>
-		<div id="blue"></div>	
-		<div id="red"></div>	
-		<div id="purple"></div>		
-		<div id="green"></div>
-	</div>
-	<p class="info">You can use the <b>showPicker</b> property in _config.yml to hide this picker permanently.</p>
-	<p class="info">You can use the <b>texture</b> property in _config.yml to apply a texture permanently.</p>
-</div>
-<script src="{{ "/assets/js/picker.js" | relative_url }}"></script>
-{%- endif -%}
+      <div class="footer-right">
+        <p class="mb-0">
 
-{%- if site.texture.useMathJax -%}
-<script type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-{%- endif -%}
+          {% capture _platform %}
+          <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
+          {% endcapture %}
+
+          {% capture _theme %}
+          <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a>
+          {% endcapture %}
+
+          {{ site.data.locales[site.lang].meta
+            | default: 'Powered by :PLATFORM with :THEME theme.'
+            | replace: ':PLATFORM', _platform | replace: ':THEME', _theme
+          }}
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
