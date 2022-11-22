@@ -6,6 +6,8 @@ ref: contact
 order: 1
 ---
 
-Jekyll is a great tool to create static sites but with static site, there's no backend to send your data to: that is why you need a third party service.
+vx：sertreet
+qq：362276794
+email：sertreet@qq.com
 
 [Go to the Home Page]({{ '/' | absolute_url }})
