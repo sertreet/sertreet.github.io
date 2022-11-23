@@ -48,7 +48,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://sertreet.github.io" # the base hostname & protocol for your site, e.g. https://example.com
 favicon: "" # the favicon for your site
 
 # Yat date format
@@ -101,7 +101,6 @@ yat:
 #     img: https://cdn.countryflags.com/thumbs/russia/flag-400.png
 #     text: Russian
 
-remote_theme: "jeffreytse/jekyll-theme-yat"
 # You can choose a theme color
 # Default theme colors as below:
 # coolblack: #090a0b
