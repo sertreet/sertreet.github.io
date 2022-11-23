@@ -101,6 +101,7 @@ yat:
 #     img: https://cdn.countryflags.com/thumbs/russia/flag-400.png
 #     text: Russian
 
+remote_theme: "jeffreytse/jekyll-theme-yat"
 # You can choose a theme color
 # Default theme colors as below:
 # coolblack: #090a0b
