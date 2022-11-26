@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 什么是忆阻器？
-tags: Hydrogen
+tags: RRAM
 ---
 忆阻器，全称记忆电阻器(Memristor)。它是表示磁通与电荷关系的电路器件。忆阻具有电阻的量纲，但和电阻不同的是，忆阻的阻值是由流经它的电荷确定。
 
