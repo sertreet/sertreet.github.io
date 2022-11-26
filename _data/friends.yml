@@ -1,11 +1,11 @@
 - name: Link
   image: https://atlinker.cn/avatar/avatar.png
-  url: https://atlinker.cn/
+  url: https://blog.081700.xyz/
   describe: Link's Blog
 
 - name: Daily
   image: https://atlinker.cn/avatar/default.png
-  url: https：//linker.ml/daily/
+  url: https://blog.081700.xyz/
   describe: Daily
 
 # - name: Links Name
