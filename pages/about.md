@@ -22,5 +22,5 @@ Github: [sertreet](https://github.com/sertreet)
 
 <center>微信扫一扫加博主好友</center>
 
-![wechat](./image/wx.png)
+![wechat](https://imgse.com/i/zNQs4s)
 
