@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Billboard
+title: 兴趣
 tagline: Biu~
 ---
 
