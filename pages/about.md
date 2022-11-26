@@ -8,20 +8,19 @@ permalink: /about.html
 
 ## #作者
 
-你可以通过以下方式联系作者
+你可以通过以下方式联系博主
 
-QQ: 1316341442
+QQ: 362276794
 
-Email: <a href="mailto:lk@atlinker.cn">lk@atlinker.cn</a>
+Email: <a href="mailto:sertreet@qq.com">sertreet@qq.com</a>
 
-Github: [link9596](https://github.com/link9596)
+Github: [sertreet](https://github.com/sertreet)
 
-## #赞赏
+## #加博主微信好友
 
-本主题使用免费，也是作者长期工作的结晶，如果你喜欢主题\~想支持作者，欢迎请我喝杯奶茶！~
+快来吧！~
 
-<center>扫下方付款二维码即可向作者赞赏!</center>
+<center>微信扫一扫加博主好友</center>
 
-![wechat](https://atlinker.cn/pay/wechat.png)
+![wechat](https://github.com/sertreet/sertreet.github.io/blob/main/image/wx.png)
 
-![pay](https://atlinker.cn/pay/apay.png)
