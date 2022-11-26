@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Links
+title: 友情链接
 tagline: My friends.
 permalink: /links.html
 ---
