@@ -17,7 +17,7 @@ PJAX: true #启用PJAX，会与评论系统冲突（如不用评论系统建议�
 paginate: 8 #同时显示的最大文章数，超过自动分页
 paginate_path: "page:num"
 
-background: https://s1.ax1x.com/2022/11/26/zNlQx0.jpg
+background: https://cdn.jsdelivr.net/gh/sertreet/sertreet.github.io/image/desktop.jpg
 theme_color: 00CCFF
 
 # hydrogen-blog date format
