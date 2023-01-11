@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 一些常用的Linux命令
 tags: Linux
 ---

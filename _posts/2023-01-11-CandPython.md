@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Python调用C代码
 tags: Linux
 ---

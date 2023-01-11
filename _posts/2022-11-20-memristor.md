@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 什么是忆阻器？
 tags: RRAM
 ---
