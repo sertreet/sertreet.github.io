@@ -55,8 +55,8 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: sertreet/sertreet.github.io
-repository_tree: main
+repository: 
+repository_tree: 
 
 
 ## => Paths
