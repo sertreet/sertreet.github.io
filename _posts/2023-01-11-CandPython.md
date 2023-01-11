@@ -11,7 +11,8 @@ tags: Linux
 #include<stdio.h> 
 int foo()
 { 
-	int i,k,m; for(i=0;i<1000;i++)
+	int i,k,m;
+	for(i=0;i<1000;i++)
 	{
 		for(k=0;k<1000;k++)
 		{ 
