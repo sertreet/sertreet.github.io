@@ -40,5 +40,5 @@ Github: [sertreet](https://github.com/sertreet)
 
 <center>微信扫下方二维码即可加博主微信!</center>
 
-![wechat](https://blog.081700.xyz/image/wx.png)
+![wechat](https://blog.rram.top/image/wx.png)
 
