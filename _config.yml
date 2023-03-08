@@ -18,7 +18,7 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : blog.081700.xyz # the base hostname & protocol for your site e.g. https://www.someone.com
+url     : blog.rram.top # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
 title   : Geoffrey Lee Blog
 description: > # this means to ignore newlines until "Language & timezone"
@@ -36,7 +36,7 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 author:
   type      : # "person" (default), "organization"
   name      : Geoffrey Lee
-  url       : https://blog.081700.xyz
+  url       : https://blog.rram.top
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
   email     : sertreet@qq.com
