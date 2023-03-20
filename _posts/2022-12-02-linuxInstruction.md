@@ -20,9 +20,9 @@ CentOS 系统: `yum update -y && yum install curl -y`
 `pip install -i https://pypi.doubanio.com/simple/ --trusted-host pypi.doubanio.com pillow`  
 pillow替换成要安装的软件  
 
-这个方法更简单，直接一步到位：
-`pip config set global.index-url http://mirrors.aliyun.com/pypi/simple/`
-`pip config set global.trusted-host mirrors.aliyun.com`
+这个方法更简单，直接一步到位：  
+`pip config set global.index-url http://mirrors.aliyun.com/pypi/simple/`  
+`pip config set global.trusted-host mirrors.aliyun.com`  
 
 # Git提交代码  
 将本地代码全部提交：`git  add .`  
