@@ -38,3 +38,13 @@ pillow替换成要安装的软件
 恢复到窗口：`screen -r xxxx(id号)或者name`  
 杀死会话窗口：`kill -9 xxxx(id号)`  
 清除死去窗口：`screen -wipe`  
+
+# 在同一个内网里使用ubuntu的jupyter notebook  
+要在内网中使用Ubuntu的Jupyter Notebook，需要进行以下步骤：  
++ 安装Jupyter Notebook。您可以使用Anaconda或pip安装Jupyter Notebook。  
++ 生成配置文件。在终端中输入以下命令：`jupyter notebook --generate-config`。  
++ 设置密码。在终端中输入以下命令：`jupyter notebook password`。这将提示您输入密码并确认密码。  
++ 开启端口。在终端中输入以下命令：`jupyter notebook --ip=0.0.0.0 --port=8888`。这将开启Jupyter Notebook服务器，并允许其他计算机通过IP地址和端口号访问它。   
+
+如果想要更好的安全性，可以使用SSL证书来加密通信。有关如何使用SSL证书的详细信息，请参见Jupyter Notebook文档。  
+如果计算机上有防火墙或路由器，则可能需要配置它们以允许其他计算机访问Jupyter Notebook服务器。  
