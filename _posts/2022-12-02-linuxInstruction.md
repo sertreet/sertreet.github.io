@@ -48,3 +48,8 @@ pillow替换成要安装的软件
 
 如果想要更好的安全性，可以使用SSL证书来加密通信。有关如何使用SSL证书的详细信息，请参见Jupyter Notebook文档。  
 如果计算机上有防火墙或路由器，则可能需要配置它们以允许其他计算机访问Jupyter Notebook服务器。  
+
+# 在ubuntu里新建用户，并切换到用户
+1. 新建用户命令`sudo adduser newuser`  
+2. 系统将提示您输入新用户的密码和其他信息  
+3. 切换到新用户命令`su -l newuser`  
