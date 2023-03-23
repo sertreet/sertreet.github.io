@@ -49,7 +49,21 @@ pillow替换成要安装的软件
 如果想要更好的安全性，可以使用SSL证书来加密通信。有关如何使用SSL证书的详细信息，请参见Jupyter Notebook文档。  
 如果计算机上有防火墙或路由器，则可能需要配置它们以允许其他计算机访问Jupyter Notebook服务器。  
 
-# 在ubuntu里新建用户，并切换到用户
+# 在ubuntu里新建用户，并切换到用户  
 1. 新建用户命令`sudo adduser newuser`  
 2. 系统将提示您输入新用户的密码和其他信息  
 3. 切换到新用户命令`su -l newuser`  
+
+# conda: command not found解决办法  
+## 问题：  
+在ubuntu中安装anaconda后，在终端输入conda info --envs检验anaconda是否安装成功，发现报错：conda: command not found 。  
+## 原因分析：  
+因为~/.bashrc文件没有配置好。简单来说，就是找不到ananconda的位置，就和本地电脑配置环境变量是一个道理  
+## 解决方案：  
+配置~/.bashrc文件  
+`vim ~/.bashrc`  
+然后键入 i 进行更改，找到你ananconda3的位置，在最后一行加入以下命令  
+`export PATH=$PATH:/home/root/anaconda3/bin`其中这里的root表示你的账户名  
+然后点击 esc键退出，输入 :wq 回车保存并退出。当然 ，也可以直接找到 .bashrc这个文件，在文件里面直接修改。  
+然后添加后，激活一下  
+`source ~/.bashrc`
