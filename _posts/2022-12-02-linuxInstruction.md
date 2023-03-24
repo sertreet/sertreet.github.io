@@ -56,7 +56,7 @@ pillow替换成要安装的软件
 3. 切换到新用户命令`su -l newuser`  
 + 这样会无法使用sudo命令，还需要给账号赋予权限：  
 1. 在root账户下添加文件的写权限。也就是输入命令"`chmod u+w /etc/sudoers`"  
-2. 编辑/etc/sudoers文件。也就是输入命令"`vim /etc/sudoers`",输入"i"进入编辑模式，找到这一 行："root ALL=(ALL) ALL"在起下面添加"xxx ALL=(ALL) ALL"(这里的xxx是你的用户名)，然后保存（就是先按一 下Esc键，然后输入":wq"）退出  
+2. 编辑/etc/sudoers文件。也就是输入命令"`vim /etc/sudoers`",输入"i"进入编辑模式，找到这一 行："root ALL=(ALL) ALL"在起下面添加"`xxx ALL=(ALL) ALL`"(这里的xxx是你的用户名)，然后保存（就是先按一 下Esc键，然后输入":wq"）退出  
 3. 撤销文件的写权限。也就是输入命令"`chmod u-w /etc/sudoers`"
 
 # conda: command not found解决办法  
