@@ -72,3 +72,15 @@ pillow替换成要安装的软件
 然后点击 esc键退出，输入 :wq 回车保存并退出。当然 ，也可以直接找到 .bashrc这个文件，在文件里面直接修改。  
 然后添加后，激活一下  
 `source ~/.bashrc`
+
+# Ubuntu申请证书，https访问  
+可以使用Let’s Encrypt免费证书，该证书是由非营利组织提供的。以下是在Ubuntu上使用Let’s Encrypt免费证书的步骤：  
+1. 安装Certbot工具。  
+`sudo apt-get update`  
+`sudo apt-get install certbot python3-certbot-apache`  
+2. 执行以下命令，生成证书。  
+`sudo certbot --apache`  
+3. 根据系统返回的提示，输入生成证书所需的信息。  
+4. 完成命令提示的输入后，将获得一个有效期为90天的证书。  
+5. 可以使用以下命令更新证书。  
+`sudo certbot renew --dry-run`
