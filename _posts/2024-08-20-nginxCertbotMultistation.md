@@ -15,7 +15,8 @@ Nginx 的站点配置文件通常位于 /etc/nginx/sites-available/ 目录下。
 创建一个名为 rram_top 的配置文件：  
 `sudo vim /etc/nginx/sites-available/rram_top`  
 在文件中添加以下内容：  
-`server {
+```bash
+server {
     listen 80;
     server_name rram.top www.rram.top;
     root /var/www/rram_top;
@@ -23,12 +24,14 @@ Nginx 的站点配置文件通常位于 /etc/nginx/sites-available/ 目录下。
     location / {
         try_files $uri $uri/ =404;
     }
-}`
+}
+```
 为 memristor.cn 和 www.memristor.cn 创建配置文件  
 同样地，创建一个名为 memristor_cn 的配置文件：  
 `sudo nano /etc/nginx/sites-available/memristor_cn`  
 在文件中添加以下内容：  
-`server {
+```bash
+server {
     listen 80;
     server_name memristor.cn www.memristor.cn;
     root /var/www/memristor_cn;
@@ -36,7 +39,8 @@ Nginx 的站点配置文件通常位于 /etc/nginx/sites-available/ 目录下。
     location / {
         try_files $uri $uri/ =404;
     }
-}`   
+}
+```
 ## 3.启用站点配置  
 将配置文件从 sites-available 目录链接到 sites-enabled 目录，以启用这些站点：  
 `sudo ln -s /etc/nginx/sites-available/rram_top /etc/nginx/sites-enabled/`  
