@@ -28,7 +28,7 @@ server {
 ```
 为 memristor.cn 和 www.memristor.cn 创建配置文件  
 同样地，创建一个名为 memristor_cn 的配置文件：  
-`sudo nano /etc/nginx/sites-available/memristor_cn`  
+`sudo vim /etc/nginx/sites-available/memristor_cn`  
 在文件中添加以下内容：  
 ```bash
 server {
