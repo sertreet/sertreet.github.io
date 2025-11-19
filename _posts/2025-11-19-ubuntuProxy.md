@@ -3,7 +3,6 @@ title: Ubuntu代理设置全解
 tags: Linux
 ---
 
-------
 
 ## 🧩 一、Linux 上的“系统代理”其实是 GUI 层代理
 
@@ -22,7 +21,6 @@ tags: Linux
 
 > 你设置的“系统代理”，git 默认不会理会。
 
-------
 
 ## 🧭 二、要让 `git` 走代理，你必须单独配置它
 
@@ -48,7 +46,6 @@ git config --global --get http.proxy
 git config --global --get https.proxy
 ```
 
-------
 
 ### ✅ 如果你的代理是 SOCKS5（例如 127.0.0.1:1080 或 10801）
 
@@ -64,7 +61,6 @@ git config --global https.proxy socks5h://127.0.0.1:10801
 - `socks5h://` 中的 **h** 表示由代理解析域名（防止 DNS 泄露）；
 - 如果你写 `socks5://`，git 会在本地解析域名，导致可能被污染。
 
-------
 
 ### ✅ 取消代理（恢复直连）
 
@@ -73,7 +69,6 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
 
-------
 
 ## 🧠 三、通用环境变量法（影响所有命令行程序）
 
@@ -113,7 +108,6 @@ curl https://www.google.com
 ~/.bash_profile
 ```
 
-------
 
 ## 🧪 四、验证代理是否真的生效
 
@@ -134,7 +128,6 @@ curl -s https://ipinfo.io
 
 查看 `ip` 字段是否为你的代理出口 IP。
 
-------
 
 ## ✅ 总结表格
 
@@ -144,7 +137,6 @@ curl -s https://ipinfo.io
 | `git config --global http.proxy` | 仅 git           | ✅ 是         | ❌ 否         |
 | `export http_proxy=...`          | 所有命令行程序   | ✅ 是         | ✅ 是         |
 
-------
 
 ## 💡 推荐实践（给你当前的情况）
 
@@ -166,5 +158,4 @@ git config --global http.proxy socks5h://127.0.0.1:10801
 export ALL_PROXY="socks5h://127.0.0.1:10801"
 ```
 
-------
 
