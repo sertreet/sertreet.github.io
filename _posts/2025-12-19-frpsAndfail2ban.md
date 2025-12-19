@@ -7,7 +7,6 @@ tags: Linux
 
 以下是完整的安装与策略配置步骤：
 
----
 
 ## 第一步：安装 Fail2ban
 
@@ -20,7 +19,6 @@ sudo apt install fail2ban -y
 
 安装完成后，服务会自动启动。你可以用 `systemctl status fail2ban` 查看状态。
 
----
 
 ## 第二步：创建 frps 专用过滤器 (Filter)
 
@@ -44,9 +42,6 @@ datepattern = %%Y-%%m-%%d %%H:%%M:%%S
 
 ```
 
-
-
----
 
 ## 第三步：配置监狱策略 (Jail)
 
@@ -81,9 +76,6 @@ bantime = 86400
 
 ```
 
-
-
----
 
 ## 第四步：激活并验证
 
