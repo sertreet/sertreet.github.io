@@ -29,32 +29,28 @@ sudo apt install fail2ban -y
 sudo nano /etc/fail2ban/filter.d/frps.conf
 ```
 
-
-2. 粘贴以下内容（针对你提供的日志格式优化）：
+2. 粘贴以下内容（针对你提供的日志格式优化）：  
 ```ini
 [Definition]
 # 直接匹配 get a user connection 后的 IP
 failregex = get a user connection \[<HOST>:.*\]
 ignoreregex =
-
 # 显式指定 FRPS 自己的时间格式（跳过系统 syslog 的时间）
 datepattern = %%Y-%%m-%%d %%H:%%M:%%S
-
 ```
-
 
 ## 第三步：配置监狱策略 (Jail)
 
 这一步定义封禁的逻辑：错几次、封多久。
 
-1. 创建配置文件：
+1. 创建配置文件：  
 ```bash
 sudo nano /etc/fail2ban/jail.d/frps.local
 
 ```
 
 
-2. 粘贴以下内容：
+2. 粘贴以下内容：  
 ```ini
 [frps]
 enabled = true
@@ -76,10 +72,9 @@ bantime = 86400
 
 ```
 
-
 ## 第四步：激活并验证
 
-1. **清理并重启：**
+1. **清理并重启：**  
 ```bash
 # 1. 停止服务
 sudo systemctl stop fail2ban
@@ -96,25 +91,25 @@ sudo tail -f /var/log/fail2ban.log
 
 
 2. **查看封禁状态：**
-过几分钟后，你可以查看 `frps` 这个“监狱”里抓到了多少人：
+过几分钟后，你可以查看 `frps` 这个“监狱”里抓到了多少人：  
 ```bash
 sudo fail2ban-client status frps
 
 ```
 
 
-3. **手动解封（万一误伤自己）：**
+3. **手动解封（万一误伤自己）：**  
 ```bash
 sudo fail2ban-client set frps unbanip [你的IP]
 
 ```
-4. **实时追踪日志：**
+4. **实时追踪日志：**  
 ```bash
 sudo journalctl -u frps -f
 
 ```
 
-5. **查看iptables封禁的ip：**
+5. **查看iptables封禁的ip：**  
 ```bash
 sudo iptables -L -n | grep REJECT
 
