@@ -67,7 +67,7 @@ bantime = 86400
 ```
 ## 第四步：激活并验证
 
-1. **清理并重启：**  
+1. 清理并重启：  
 ```bash
 # 1. 停止服务
 sudo systemctl stop fail2ban
@@ -78,21 +78,21 @@ sudo systemctl start fail2ban
 # 4. 观察 syslog 确保它在读文件
 sudo tail -f /var/log/fail2ban.log
 ```
-2. **查看封禁状态：**
+2. 查看封禁状态：
 过几分钟后，你可以查看 `frps` 这个“监狱”里抓到了多少人：  
 ```bash
 sudo fail2ban-client status frps
 ```
-3. **手动解封（万一误伤自己）：**  
+3. 手动解封（万一误伤自己）：  
 ```bash
 sudo fail2ban-client set frps unbanip [你的IP]
 ```
-4. **实时追踪日志：**  
+4. 实时追踪日志：  
 ```bash
 sudo journalctl -u frps -f
 ```
 
-5. **查看iptables封禁的ip：**  
+5. 查看iptables封禁的ip：  
 ```bash
 sudo iptables -L -n | grep REJECT
 ```
