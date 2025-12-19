@@ -16,7 +16,6 @@ tags: Linux
 ```bash
 sudo apt update
 sudo apt install fail2ban -y
-
 ```
 
 安装完成后，服务会自动启动。你可以用 `systemctl status fail2ban` 查看状态。
@@ -27,10 +26,9 @@ sudo apt install fail2ban -y
 
 我们需要告诉 Fail2ban 如何在日志里识别“攻击行为”。
 
-1. 创建规则文件：
+1. 创建规则文件：  
 ```bash
 sudo nano /etc/fail2ban/filter.d/frps.conf
-
 ```
 
 
