@@ -5,7 +5,6 @@ tags: Linux
 
 在 Ubuntu Server 上安装 NVIDIA 驱动涉及几个步骤，需要注意你的 GPU 型号、内核版本以及是否使用了 `nouveau` 开源驱动。下面我给你整理一个详细的流程（适用于 Ubuntu 22.04/20.04 Server）：
 
-------
 
 ## **步骤 1：检查你的 GPU 型号**
 
@@ -17,7 +16,6 @@ lspci | grep -i nvidia
 
 如果显示了 NVIDIA GPU 的信息，就可以继续。
 
-------
 
 ## **步骤 2：更新系统并安装必要工具**
 
@@ -29,7 +27,6 @@ sudo apt install build-essential dkms linux-headers-$(uname -r) -y
 
 这些是编译 NVIDIA 驱动时需要的工具和内核头文件。
 
-------
 
 ## **步骤 3：禁用 Nouveau 驱动（开源 NVIDIA 驱动）**
 
@@ -58,7 +55,6 @@ sudo update-initramfs -u
 sudo reboot
 ```
 
-------
 
 ## **步骤 4：添加 NVIDIA 官方 PPA（推荐）**
 
@@ -68,8 +64,6 @@ Ubuntu 提供了 NVIDIA 官方 PPA，可以方便地安装驱动。
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 ```
-
-------
 
 ## **步骤 5：查找可用的 NVIDIA 驱动**
 
@@ -85,7 +79,6 @@ driver   : nvidia-driver-530 - distro non-free recommended
 
 推荐安装 `recommended` 的版本。
 
-------
 
 ## **步骤 6：安装 NVIDIA 驱动**
 
@@ -101,7 +94,6 @@ sudo apt install nvidia-driver-530 -y
 sudo reboot
 ```
 
-------
 
 ## **步骤 7：验证驱动是否安装成功**
 
@@ -111,7 +103,6 @@ nvidia-smi
 
 如果能看到 GPU 信息和驱动版本，就说明安装成功了。
 
-------
 
 ### **注意事项**
 
@@ -119,7 +110,6 @@ nvidia-smi
 2. 如果你使用的是最新 GPU，可能需要安装更高版本驱动。
 3. 遇到黑屏或启动问题，检查 `nouveau` 是否完全禁用。
 
-------
 
 ## 安装CUDA Toolkit Installer
 
@@ -130,7 +120,6 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/
 
 安装好了 **CUDA Toolkit**，但是系统还找不到 `nvcc` 命令，这说明 **CUDA 的环境变量没有添加到 PATH 中**。我帮你整理一下最标准的做法。
 
-------
 
 ## **1️⃣ 确认 CUDA 安装路径**
 
@@ -140,8 +129,6 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/
 ls /usr/local | grep cuda
 ```
 
-
-------
 
 ## **2️⃣ 添加 CUDA 到环境变量**
 
@@ -167,8 +154,6 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 source ~/.bashrc
 ```
 
-------
-
 ## **4️⃣ 验证**
 
 ```bash
@@ -183,5 +168,3 @@ Copyright (c) 2005-2024 NVIDIA Corporation
 Built on ...
 Cuda compilation tools, release 12.2, V12.2.91
 ```
-
-------

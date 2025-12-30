@@ -5,7 +5,6 @@ tags: Linux
 
 在 **Ubuntu Server** 上通常**没有图形界面**，连接 Wi‑Fi 一般用命令行完成。下面按**最常见、最稳妥**的方法给你说明。
 
-------
 
 ## 一、确认无线网卡是否被识别
 
@@ -23,7 +22,6 @@ iw dev
 
 如果没有，可能需要安装驱动（尤其是 USB Wi‑Fi）。
 
-------
 
 ## 二、安装必要工具
 
@@ -41,7 +39,6 @@ sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 ```
 
-------
 
 ## 三、搜索附近 Wi‑Fi（关键步骤）
 
@@ -59,7 +56,6 @@ IN-USE  SSID        SIGNAL  SECURITY
         OfficeNet   55      WPA1 WPA2
 ```
 
-------
 
 ## 四、连接 Wi‑Fi
 
@@ -79,7 +75,6 @@ sudo nmcli dev wifi connect "HomeWifi" password "12345678"
 Device 'wlp2s0' successfully activated
 ```
 
-------
 
 ## 五、验证是否联网
 
@@ -88,7 +83,6 @@ ip a
 ping -c 4 www.baidu.com
 ```
 
-------
 
 ## 六、如果是隐藏 Wi‑Fi
 
@@ -96,7 +90,6 @@ ping -c 4 www.baidu.com
 sudo nmcli dev wifi connect "SSID" password "密码" hidden yes
 ```
 
-------
 
 ## 七、老设备 / 无 NetworkManager（备用方案）
 
@@ -108,8 +101,6 @@ sudo wpa_passphrase SSID 密码 | sudo tee /etc/wpa_supplicant.conf
 sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
 sudo dhclient wlan0
 ```
-
-------
 
 ## 常见问题
 
@@ -128,7 +119,6 @@ sudo rfkill unblock wifi
 
 NetworkManager 会自动保存连接，一般不会出现该问题。
 
-------
 
 ## 总结（最推荐流程）
 
@@ -138,5 +128,4 @@ nmcli dev wifi list
 sudo nmcli dev wifi connect "SSID" password "密码"
 ```
 
-------
 
